@@ -1,5 +1,7 @@
 import json
 import requests
+from fpl.fixture import Fixture
+from fpl.season import Season
 
 API_BASE_URL = "https://fantasy.premierleague.com/drf/"
 
@@ -141,7 +143,7 @@ class Player(object):
     @property
     def fixtures(self):
         """List of the player's upcoming fixtures."""
-        return self._specific["fixtures"]
+        return [Fixture(fixture) for fixture in self._specific["fixtures"]]
 
     @property
     def history_summary(self):
@@ -151,12 +153,13 @@ class Player(object):
     @property
     def fixtures_summary(self):
         """List of the player's closest three upcoming fixtures."""
-        return self._specific["fixtures_summary"]
+        return [Fixture(fixture) for fixture in
+            self._specific["fixtures_summary"]]
 
     @property
     def history_past(self):
         """List of a summary of the player's performance in previous seasons."""
-        return self._specific["history_past"]
+        return [Season(season) for season in self._specific["history_past"]]
 
     @property
     def history(self):

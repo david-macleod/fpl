@@ -21,3 +21,4 @@ docs/_templates/
 
 # Not ready yet
 fpl/fixture.py
+test.py

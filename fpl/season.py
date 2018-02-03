@@ -1,0 +1,30 @@
+class Season(object):
+    def __init__(self, season):
+        self.id = season["id"]
+        self.season_name = season["season_name"]
+        self.element_code = season["element_code"]
+        self.start_price = season["start_cost"]
+        self.end_price = season["end_cost"]
+        self.total_points = season["total_points"]
+        self.minutes = season["minutes"]
+        self.goals = season["goals_scored"]
+        self.assists = season["assists"]
+        self.clean_sheets = season["clean_sheets"]
+        self.conceded = season["goals_conceded"]
+        self.own_goals = season["own_goals"]
+        self.penalties_saved = season["penalties_saved"]
+        self.penalties_missed = season["penalties_missed"]
+        self.yellow_cards = season["yellow_cards"]
+        self.red_cards = season["red_cards"]
+        self.saves = season["saves"]
+        self.bonus = season["bonus"]
+        self.bps = season["bps"]
+        self.influence = season["influence"]
+        self.creativity = season["creativity"]
+        self.threat = season["threat"]
+        self.ict_index = season["ict_index"]
+        self.ea_index = season["ea_index"]
+        self.season = season["season"]
+
+    def __str__(self):
+        return "{}".format(self.season_name)
