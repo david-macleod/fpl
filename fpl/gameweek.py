@@ -1,6 +1,5 @@
 import json
 import requests
-from fpl.fixture import Fixture
 
 API_BASE_URL = "https://fantasy.premierleague.com/drf/"
 
@@ -41,7 +40,7 @@ class Gameweek(object):
         A list of dictionaries containing information about the fixtures of
         the gameweek.
         """
-        return [Fixture(fixture) for fixture in self._additional["fixtures"]]
+        return self._additional["fixtures"]
 
     @property
     def players(self):

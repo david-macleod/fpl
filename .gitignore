@@ -19,6 +19,5 @@ docs/_templates/
 
 .idea/
 
-# Not ready yet
-fpl/fixture.py
+# Just for testing
 test.py
